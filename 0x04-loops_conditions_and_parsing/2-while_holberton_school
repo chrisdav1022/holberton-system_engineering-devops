@@ -3,6 +3,6 @@
 t=1
 while [ $t -le 10 ]
 do
-  echo "holberton school"
-  ((t++))
+    echo "holberton school"
+    ((t++))
 done
