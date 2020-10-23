@@ -7,7 +7,9 @@ do
     
     if [ $t == 9 ]
     then
+
        echo "Hi"	
+
     fi
 
        ((t++))
