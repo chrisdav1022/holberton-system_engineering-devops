@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times but in position 9 print "hi"
+t=1
+while [ $t -le 11 ]
+do
+    echo "Holberton School"
+    
+    if [ $t == 9 ]
+    then
+       echo "Hi"	
+    fi
+
+       ((t++))
+done
