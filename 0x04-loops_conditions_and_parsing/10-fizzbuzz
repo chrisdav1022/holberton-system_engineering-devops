@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# displays FizzBuzz from 1 to 100
+t=1
+while [ $t -le 100 ]
+do
+    if (( t % 15 == 0 ))
+    then
+    echo "FizzBuzz"
+
+    elif (( t % 3 == 0 ))
+    then
+    echo "Fizz"
+
+    elif (( t % 5 == 0 ))
+    then
+    echo "Buzz"
+
+    else
+    echo $t
+    fi
+
+    ((t++))
+done
