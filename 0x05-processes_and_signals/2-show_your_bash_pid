@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script lists all
+ps ux -e --forest | grep "bash"
