@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script stores its PID in a file that gets deleted upon exit
+# Process and PID file
 sudo bash -c "echo $BASHPID > /var/run/holbertonscript.pid"
 while true
 do
