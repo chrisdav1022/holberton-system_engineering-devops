@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# connect to private key
+sudo ssh -i ~/.ssh/holberton ubuntu@34.75.46.215
