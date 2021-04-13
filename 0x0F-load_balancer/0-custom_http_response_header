@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Configure Nginx server so that /redirect_me redirects to another page
-apt-get -y update
-apt-get -y install nginx
-ufw allow 'Nginx HTTP'
+sudo apt-get -y update
+sudo apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sed -i "/arewrite ^/redirect_me https://www.youtube.com/watch?v=wSdT-SArM2Q permanent; /etc/nginx/sites-available/default
+sudo sed -i "/trewrite ^/redirect_me https://www.youtube.com/watch?v=wSdT-SArM2Q permanent;" /etc/nginx/sites-available/default
+sudo sed -i "/server_name _;/ a\\\tadd_header X-Served-By \"\$HOSTNAME\";" /etc/nginx/sites-available/default
+sudo sed -i "/redirect_me/ a\\\terror_page 404 /custom_404.html;" /etc/nginx/sites-available/default
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sed -i "42i $ns" /etc/nginx/sites-available/default
-service nginx restart
+sudo service nginx restart
