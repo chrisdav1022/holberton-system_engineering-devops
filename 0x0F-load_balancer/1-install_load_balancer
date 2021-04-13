@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 # Install and configure HAproxy on your server
+balancer="\
+frontend haproxy_balancer
+    bind *:80
+    mode http
+    default_backend webservers
+    
+backend webservers
+    balance roundrobin
+    server 800-web-01 34.75.46.215:80 check
+    server 800-web-02 34.73.24.104:80 check
+"
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.5.\*
 echo "web-backend
@@ -10,4 +21,4 @@ frontend http
 blind \*:80
 mode http
 backend web-backend" /etc/default/haproxy
-service haproxy restart
+sudo service haproxy restart
