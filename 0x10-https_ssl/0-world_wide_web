@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# display information of the subdomains
+subdom () {
+if [ "$2" ];
+then
+	echo -n "The subdomain $2 is a "
+	dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $5}'
+else
+	for i in www lb-01 web-01 web-02
+        do
+		echo -n "The subdomain $i is a"
+		dig "$i.$1" | grep -A1 'ANSWER SECTION:' | awk '{print " " $5}'
+	done
+fi
+}
+subdom "$1" "$2"		
