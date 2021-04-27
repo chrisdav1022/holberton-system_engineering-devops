@@ -2,6 +2,9 @@ apt-get -y update
 apt-get -y install ufw
 ufw default allow outgoing
 ufw default deny incoming
+ufw allow 22
+ufw allow 443
+ufw allow 80
 ufw allow 22/tcp
 ufw allow 443/tcp
 ufw allow 80/tcp
