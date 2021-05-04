@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Dictionary of list of dictionaries. """
+
+"""Dictionaries"""
+
 import json
 import requests
 import sys
