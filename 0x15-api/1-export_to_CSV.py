@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Export to CSV"""
+
+"""CSV"""
+
 import csv
 import requests
 import sys
@@ -14,7 +16,7 @@ if __name__ == "__main__":
     _id = users.get('id')
 
     with open('{}.csv'.format(sys.argv[1]), mode='w') as id_csv:
-        f = csv.writer(id_csv, quoting=csv.QUOTE_ALL)
+        j = csv.writer(id_csv, quoting=csv.QUOTE_ALL)
 
-        for r in todos:
-            f.writerow([_id, _name, r.get('completed'), r.get('title')])
+        for i in todos:
+            j.writerow([_id, _name, i.get('completed'), i.get('title')])
