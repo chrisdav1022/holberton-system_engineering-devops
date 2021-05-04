@@ -1,6 +1,7 @@
-  
 #!/usr/bin/python3
-""" Export to JSON. """
+
+"""JSON file"""
+
 import json
 import requests
 import sys
